@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.github.NaikSoftware:StompProtocolAndroid-1.1.8">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/StompProtocolAndroid-1.1.8.aar/2fdd2557ab0602591a2e698ca521826d/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/StompProtocolAndroid-1.1.8.aar/2fdd2557ab0602591a2e698ca521826d/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.NaikSoftware/StompProtocolAndroid/1.1.8/d5259f3acb8affd67b08552875fa462153797eef/StompProtocolAndroid-1.1.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

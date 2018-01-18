@@ -1,0 +1,66 @@
+package wipc;
+
+option java_package = "com.webkey.nativ.net";
+option java_outer_classname = "WIPCProto";
+
+message Message {
+    enum Type { SCREEN = 1; TOUCH = 2; KEY = 3; BUTTON = 4; CMD = 5; }
+
+    required Type type = 1;
+    repeated Touch touch = 2;
+    optional Screen screen = 3;
+    optional Key key = 4;
+    optional Button button = 5;
+    optional Command command = 6;
+}
+
+message Screen {
+    enum Type { RESOLUTION = 1; FREQUENCY = 2; IMGDIFF = 3; }
+    required Type type = 1;
+    optional Resolution resolution = 2;
+    optional Frequency frequency = 3;
+    optional ImageDiff imagediff = 4;
+}
+
+message Resolution {
+    required uint32 width = 1;
+    required uint32 height = 2;
+}
+
+message Frequency {
+    required uint32 frequency = 1;
+}
+
+message ImageDiff {
+    required bool diff = 1;
+}
+
+
+message Touch {
+    enum Type { MOVE = 2; DOWN = 1; UP = 0; }
+    required Type type = 1;
+    required uint32 width = 2;
+    required uint32 height = 3;
+    required bool mirror = 4;
+    required bool flip = 5;
+}
+
+message Key {
+    enum Type { ENABLE = 0; DISABLE = 1; }
+    required Type type = 1;
+    //required only at ENABLE type
+    optional string defaultInputMethod = 2;
+}
+
+message Button{
+    enum Type { UP = 0; DOWN = 1; LONGPRESS = 2; }
+    required Type type = 1;
+    required uint32 buttonid = 2;
+}
+
+message Command {
+    enum Type { HALT = 0; INIT_KEY = 1; UPDATE = 2;}
+    required Type type = 1;
+    //in case if it is the first package
+    optional string initkey = 2;
+}

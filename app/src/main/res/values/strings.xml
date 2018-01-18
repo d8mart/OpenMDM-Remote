@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Webkey</string>
+    <string name="app_name_2">OpenMDMRemote</string>
+    <string name="wk_server_address">webkey.cc</string>
+    <string name="wk_pairing_path">/pairing/.*</string>
+    <string name="icon">icon</string>
+    <string name="notifiaction_login_txt">Your device is under control</string>
+
+    <!-- webui msgs -->
+    <string name="txt_webui_key">Your session key is:&#160;</string>
+
+    <!-- welcome tour fragment -->
+    <string name="tour_btn_login">Log in</string>
+    <string name="tour_btn_registration">Sign up</string>
+    <string name="txt_accept_license">By continuing you agree to our <b>Terms of Service</b> and <b>Privacy Policy</b></string>
+
+    <!-- tour card 1 -->
+    <string name="tour_txt_welcome_msg">Hello,\nwe help you connect, debug your device remotely</string>
+
+    <!-- registration -->
+    <string name="action_bar_title">Welcome to Webkey</string>
+    <string name="menu_pairing">Pairing</string>
+
+    <!-- sign up and log in fragments-->
+    <string name="signup_hint_email">EMAIL</string>
+    <string name="signup_error_email">Not valid address</string>
+    <string name="signup_error_email_alreadyinuse">Address already in used</string>
+    <string name="signup_hint_password">PASSWORD</string>
+    <string name="signup_error_pwd">Not valid password</string>
+    <string name="signup_error_pwdagain">Passwords does not match</string>
+    <string name="signup_hint_passwordagain">PASSWORD AGAIN</string>
+    <string name="signup_txt_error_devicenick">Invalid nickname</string>
+    <string name="signup_toast_server_err_internal">Unexpected error</string>
+
+    <string name="login_txt_forgot_pwd">Forgot your Password?</string>
+    <string name="login_error_password">Wrong username or password.</string>
+    <string name="login_error_internal">Unexpected error, try again later!</string>
+    <string name="login_error_email">Not valid address</string>
+
+
+    <!-- device registration -->
+    <string name="devreg_error_alreadyinuse">Nick already in used</string>
+    <string name="devreg_error_devicename">Not valid nick</string>
+    <string name="devreg_hint_devicenick">DEVICE NICKNAME</string>
+    <string name="devreg_btn_dev_reg">Send</string>
+    <string name="devreg_toast_server_err_internal">Unexpected error</string>
+
+    <!-- device pairing -->
+    <string name="devpair_hint_pin">Your PIN code</string>
+    <string name="devpair_btn_pairing">Pair</string>
+    <string name="devpair_error_internal">Unexpected error, try again later!</string>
+    <string name="devpair_error_wrong_pin">Wrong pairing PIN!</string>
+
+    <!-- forgot pwd fragment -->
+    <string name="resetpwd_description">Don\'t worry\nthis can happen to anyone</string>
+    <string name="resetpwd_hint_address">EMAIL</string>
+    <string name="resetpwd_error_invalid_address">Invalid address</string>
+    <string name="resetpwd_error_internal">Internal error, try again later!</string>
+    <string name="resetpwd_msg_ok">Reset link has been sent to your e-mail address.</string>
+    <string name="resetpwd_btn_send">RESET PASSWORD</string>
+
+    <!-- Action bar -->
+    <string name="actionbar_txt_online">online</string>
+    <string name="actionbar_txt_offline">offline</string>
+    <string name="actionbar_txt_connecting">connecting</string>
+
+    <!-- main -->
+    <string name="txt_account_label">Currently accessing</string>
+    <string name="txt_addresses">This device is available at</string>
+    <string name="btn_start_service">Start</string>
+    <string name="btn_stop_service">Stop</string>
+    <string name="btn_start_registration">Registration</string>
+
+    <!-- prefeences -->
+    <string name="pref_title_general">General</string>
+    <string name="pref_autostart">Auto start</string>
+    <string name="pref_summ_autostart">Start service at boot time</string>
+    <string name="pref_account">Account</string>
+    <string name="pref_sum_account_login">Logout from Webkey account</string>
+
+    <string name="pref_title_localservice">Local service settings</string>
+    <string name="pref_dialog_title_http">Set local Http port</string>
+    <string name="pref_localhttpport">Http port</string>
+    <string name="pref_dialog_title_ws">Set local Websocket port</string>
+    <string name="pref_localwsport">WebSocket Port</string>
+
+    <string name="pref_title_harborserver">Webkey server settings</string>
+    <string name="pref_remotelogging">Remote logging</string>
+    <string name="pref_summ_remotelogging">Upload the logs to the server</string>
+
+    <!-- user settings fragment -->
+    <string name="users_title_remoteusers">Administrator users:</string>
+    <string name="users_remoteuser_nick">Remote Admin</string>
+    <string name="users_title_localusers">Local users:</string>
+    <string name="txt_delete_approve">Are you sure you want to delete?\n</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="adduser_title">Create\nnew local user</string>
+    <string name="adduser_username">USERNAME</string>
+    <string name="adduser_password">PASSWROD</string>
+    <string name="adduser_password_again">PASSWORD AGAIN</string>
+    <string name="adduser_confirm">SAVE</string>
+    <string name="adduser_deny">CANCEL</string>
+    <string name="adduser_success">User added</string>
+    <string name="adduser_fail">User already exists</string>
+    <string name="adduser_txt_error_nick">Not valid nickname</string>
+    <string name="adduser_txt_error_pwd">Not valid password</string>
+    <string name="adduser_txt_error_pwdagain">Passwords does not match</string>
+
+
+    <!-- about fragment -->
+    <string name="txt_version">Version name:&#160;</string>
+    <string name="txt_vcode">Version code:&#160;</string>
+    <string name="txt_type">Type:&#160;</string>
+    <string name="txt_debug">Debug</string>
+    <string name="txt_release">Release</string>
+    <string name="btn_donation">Donation</string>
+
+    <!-- notification -->
+    <string name="txt_signup">New signup:</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="btn_deny">Deny</string>
+    <string name="title_activity_user_settings">Users</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_">Webkey</string>
+
+    <!-- keyboard -->
+    <string name="keyboard_on">Webkey keyboard</string>
+
+    <!-- Login notifications -->
+    <string name="visitormanager_notif_title">Webkey</string>
+    <string name="visitormanager_notif_ticker">Device is being accessed remotely</string>
+    <string name="visitormanager_notif_text">Device is being accessed remotely</string>
+
+    <string name="visitormanager_online_notif_ticker">User online:</string>
+    <string name="visitormanager_online_notif_text">User online:</string>
+
+    <!-- Browser toasts-->
+    <string name="browser_toast_username_error">Username or password error</string>
+    <string name="browser_toast_login_failed">Login failed because another user is currently online</string>
+    <string name="browser_toast_user_already_exist">User already exists or signup is pending</string>
+    <string name="browser_toast_msg_format_wrong">message format wrong</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+
+    <!-- OpenMDMRemote strings -->
+
+    <string name="intro_opendmmr">Welcome to OpenMDMRemote.\nPlease wait until an administrator connects to your device. </string>
+    <string name="title_activity_principal">PrincipalActivity</string>
+
+</resources>

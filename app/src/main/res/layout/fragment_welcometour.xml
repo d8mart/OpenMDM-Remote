@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|right"
+        android:padding="15dp">
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/tour_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp" />
+
+        <LinearLayout
+            android:id="@+id/pager_indicator"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:paddingBottom="20dp"
+            android:layout_gravity="bottom|center"></LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal|bottom"
+        android:background="#3315181e"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp">
+
+        <com.openmdmremote.ui.typefaces.MyButton
+            android:id="@+id/button_signup"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="3dip"
+            android:padding="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:text="@string/tour_btn_registration"
+            android:textColor="@color/txt"
+            android:textAllCaps="true" />
+
+        <com.openmdmremote.ui.typefaces.MyButton
+            android:id="@+id/button_login"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="3dip"
+            android:padding="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/button_bordered"
+            android:text="@string/tour_btn_login"
+            android:textColor="@color/txt"
+            android:textAllCaps="true" />
+    </LinearLayout>
+</LinearLayout>

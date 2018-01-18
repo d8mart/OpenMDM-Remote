@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clickable="false">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo_white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <com.openmdmremote.ui.typefaces.MyTextInputLayout
+                android:id="@+id/inputlayout_devicenick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/txt"
+                android:layout_marginTop="@dimen/activity_txtviews_space">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:digits="abcdefghijklmnopqrstuvwxyz0123456789"
+                    android:hint="@string/devreg_hint_devicenick" />
+            </com.openmdmremote.ui.typefaces.MyTextInputLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.openmdmremote.ui.typefaces.MyButton
+        android:id="@+id/btn_send_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="@string/devreg_btn_dev_reg"
+        android:gravity="center_horizontal|bottom" />
+</LinearLayout>

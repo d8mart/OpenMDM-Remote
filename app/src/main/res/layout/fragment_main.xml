@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:webkey="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:id="@+id/fragment_container">
+
+
+    <com.openmdmremote.ui.views.RunButton
+        android:id="@+id/btn_run"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:padding="40dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="40dp">
+
+        <ImageButton
+            android:id="@+id/btn_start_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:background="@android:color/transparent"
+            android:src="@drawable/switch_off" />
+
+        <ImageButton
+            android:id="@+id/btn_stop_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:clickable="false"
+            android:background="@android:color/transparent"
+            android:src="@drawable/switch_on" />
+
+        <ImageButton
+            android:id="@+id/btn_progres_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:clickable="false"
+            android:background="@android:color/transparent"
+            android:src="@drawable/switch_loading" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/device_addresses"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <com.openmdmremote.ui.typefaces.MyTextView
+            android:id="@+id/txt_webkey_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textSize="14sp"
+            webkey:bold="false" />
+
+        <ListView
+            android:id="@+id/list_addresses"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@null"
+            android:dividerHeight="10.0sp"/>
+    </LinearLayout>
+
+    <com.openmdmremote.ui.views.VisitorView
+        android:id="@+id/visitor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:visibility="invisible" />
+</LinearLayout>

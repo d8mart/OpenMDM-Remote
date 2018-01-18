@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:webkey="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.openmdmremote.ui.typefaces.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/txt_account_label"
+        android:textSize="10sp"
+        android:textAllCaps="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/visitor_platform"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/windows" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="12dp">
+
+            <com.openmdmremote.ui.typefaces.MyTextView
+                android:id="@+id/visitor_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:textSize="17sp"
+                android:singleLine="true"
+                webkey:bold="false" />
+
+            <com.openmdmremote.ui.typefaces.MyTextView
+                android:id="@+id/visitor_agent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:textSize="10sp"
+
+                android:singleLine="true"
+                webkey:bold="false" />
+        </LinearLayout>
+
+        <com.openmdmremote.ui.typefaces.MyTextView
+            android:id="@+id/logintime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:textSize="10sp"
+            webkey:bold="false" />
+    </LinearLayout>
+</LinearLayout>

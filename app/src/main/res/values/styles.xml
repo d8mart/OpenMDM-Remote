@@ -1,0 +1,69 @@
+<resources>
+
+    <style name="Theme.WebkeyAppTheme" parent="@style/Theme.AppCompat">
+        <item name="android:windowBackground">@drawable/background</item>
+
+        <!-- For action bar -->
+        <item name="android:actionBarStyle">@style/WebkeyActionBar</item>
+        <item name="actionBarStyle">@style/WebkeyActionBar</item>
+
+        <!-- button -->
+        <item name="android:buttonStyle">@style/WebkeyWhiteButton</item>
+        <item name="buttonStyle">@style/WebkeyWhiteButton</item>
+
+
+        <item name="colorControlNormal">@color/txt</item>
+        <item name="colorControlActivated">@color/txt</item>
+        <item name="colorControlHighlight">@color/txt</item>
+        <item name="android:textColorPrimary">@color/txt</item>
+        <item name="android:textColor">@color/txt</item>
+        <item name="android:textSize">@dimen/activity_txt_size</item>
+
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <!-- AlertDialog -->
+        <item name="alertDialogTheme">@style/WebkeyAlertDialog</item>
+
+        <item name="preferenceTheme">@style/WebkeyPreference</item>
+    </style>
+
+    <style name="WebkeyPreference" parent="@style/PreferenceThemeOverlay.v14.Material">
+        <item name="android:textColorSecondary">@color/colorGray</item>
+    </style>
+
+    <style name="WebkeyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <!-- ha kiveszed akkor nem atlatszo. -->
+        <!-- <item name="background">@color/actionbar</item> -->
+    </style>
+
+    <style name="WebkeyWhiteButton" parent="@android:style/Widget.Holo.Light.Button">
+        <item name="android:textColor">@color/button_txt</item>
+        <item name="android:background">@drawable/button_white</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:padding">@dimen/activity_button_size</item>
+    </style>
+
+    <style name="WebkeyAlertDialog" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:background">@drawable/dialog_bg</item>
+        <item name="colorControlNormal">@color/colorGray</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <!-- textView -->
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+    </style>
+
+
+    <style name="WebkeyDialog">
+        <item name="android:background">@drawable/dialog_bg</item>
+        <item name="colorControlNormal">@color/colorGray</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <!-- textView -->
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+
+    </style>
+
+</resources>

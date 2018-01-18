@@ -1,0 +1,173 @@
+.whiteBox {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  z-index: 2;
+  position: relative;
+}
+.whiteBox .flexBoxContainer {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  width: 498px;
+  height: auto;
+  margin: auto;
+}
+.whiteBox .flexBoxContainer .navContainer {
+  margin: 10px auto;
+  width: 498px;
+  text-align: right;
+}
+.whiteBox .flexBoxContainer .navContainer a {
+  z-index: 3;
+  position: relative;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+.whiteBox .flexBoxContainer .navContainer a:focus {
+  text-decoration: underline;
+}
+.whiteBox .flexBoxContainer .navContainer a:hover {
+  text-decoration: underline;
+}
+.whiteBox .flexBoxContainer form {
+  padding: 40px;
+  background: white;
+  border-radius: 5px;
+}
+.whiteBox .flexBoxContainer form .heading {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  margin-left: 0;
+}
+.whiteBox .flexBoxContainer form .form-control {
+  display: block;
+  width: 100%;
+  line-height: 1.42857143;
+  color: black;
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  font-family: inherit;
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  padding-left: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+.whiteBox .flexBoxContainer form .form-control:focus {
+  z-index: 2;
+  border-color: #00d2ff;
+  outline: 0;
+}
+.whiteBox .flexBoxContainer form input {
+  background: rgba(0, 0, 0, 0);
+  font-weight: 600;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 2px solid #959595;
+  margin-bottom: 40px;
+  color: black;
+}
+.whiteBox .flexBoxContainer form input:focus {
+  box-shadow: none;
+  border-bottom: 2px solid #00d2ff;
+}
+.whiteBox .flexBoxContainer form input.inputPassword {
+  font-weight: bolder;
+}
+.whiteBox .flexBoxContainer form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 10px 16px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: inherit;
+  -webkit-appearance: button;
+  text-transform: none;
+  background-color: #00d2ff;
+  color: black;
+  font-weight: 900;
+  border: none;
+  height: 70px;
+  font-size: 16px;
+}
+.whiteBox .flexBoxContainer form button:active {
+  background-color: #00d2ff;
+  color: white;
+  outline: 0;
+}
+.whiteBox .flexBoxContainer form button:focus {
+  background-color: #00d2ff;
+  color: white;
+  outline: 0;
+}
+.whiteBox .flexBoxContainer form button:hover {
+  background-color: #00d2ff;
+  color: white;
+}
+.whiteBox .flexBoxContainer form label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+.whiteBox .flexBoxContainer form .termsAndConditionsText {
+  font-size: 10px;
+  color: white;
+}
+.whiteBox .flexBoxContainer form .termsAndConditionsText a {
+  text-decoration: underline;
+  color: white;
+}
+.whiteBox .flexBoxContainer form .termsAndConditionsText a:hover {
+  text-decoration: underline;
+  color: white;
+}
+.whiteBox .flexBoxContainer form .termsAndConditionsText a:focus {
+  text-decoration: underline;
+  color: white;
+}
+.animatedInputContainer .animatedInput {
+  position: relative;
+  margin: 0 5px 0 0;
+}
+.animatedInputContainer .animatedInput label {
+  position: absolute;
+  top: 10px;
+  font-size: 14px;
+  color: black;
+  transition: .1s all linear;
+  cursor: text;
+}
+.animatedInputContainer .animatedInput input {
+  transition: .1s all linear;
+}
+.animatedInputContainer .animatedInput.active label {
+  font-size: 12px;
+  top: -18px;
+}

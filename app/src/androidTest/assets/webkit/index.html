@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEBKEY</title>
+    <link rel="shortcut icon" type="image/png" href="webkey-logo.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!-- Style sheets -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="jquery.toastmessage.css" rel="stylesheet">
+    <link href="webkey.css" rel="stylesheet" />
+    <link href="phone.css" rel="stylesheet">
+    <link href="offcanvas.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
+    <link href="statusIndicator.css" rel="stylesheet">
+    <link href="whiteBox.css" rel="stylesheet">
+    <link href="openurl.css" rel="stylesheet">
+    <link href="spinner.css" rel="stylesheet">
+    <link href="leaflet.css" rel="stylesheet"/> <!-- 0.7.7 -->
+
+    <!-- Scripts -->
+    <script src="jquery.js"></script> <!-- 2.0.3 -->
+    <script src="location.js"></script>
+    <script src="webkeyapi.js"></script>
+    <script src="webkey.js"></script>
+    <script src="login.js"></script>
+    <script src="signup.js"></script>
+    <script src="phone.js"></script>
+    <script src="openurl.js"></script>
+    <script src="statusindicator.js"></script>
+    <script src="ready.js"></script>
+    <script src="jquery.toastmessage.js"></script>
+    <script src="leaflet.js"></script>
+    <script src="spinner.js"></script>
+    <script type='text/javascript'>
+        var WS_PORT="";
+        var PATH_STARTSH="start.sh";
+    </script>
+</head>
+
+<body scroll="no">
+    <div class="container-fluid">
+        <div class="workSpace" id="workSpace">
+            <div id="webkeySpinner" class="webkeySpinner" style="display: none;">
+                <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+                </svg>
+            </div>
+
+            <div class="content" id="phoneContainer" style="display: none;">
+                <div class="cellphone-ultimate-frame" id="wireframe">
+                    <div class="physicalButtons">
+                        <div id="cellphone-power-button" class="physicalButton cellphone-left-buttons">
+                            <div class="buttonsbatch button-txt">
+                                <div class="inline power">Power</div>
+                                <div class="animatedDotWrapper leftDot"><div class="animated-dot"></div></div>
+                                <div class="dot leftDot"></div>
+                            </div>
+                        </div>
+                        <div id="cellphone-volume-button" class="cellphone-right-buttons physicalButton">
+                            <div class="animatedDotWrapper rightDot"><div class="animated-dot"></div></div>
+                            <div class="dot rightDot"></div>
+                            <div class="volumetext button-txt">
+                                <div class="inline">Volume</div>
+                            </div>
+                            <div class="hiddenVolumetext">
+                                <div id="cellphone-volup-button" class="volume-button-txt button-txt">Up</div>
+                                <div id="volume-split"></div>
+                                <div id="cellphone-voldown-button" class="volume-button-txt button-txt">Down</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cellphone-frame-inner">
+                        <canvas id="phone-display" class="cellphone-mid" tabindex='1'>Does Not Support Canvas Element</canvas>
+                        <div id="navbar" class="cellphone-buttons">
+                            <button id="cellphone-bot-back-button" class="phonebtn"><i class="fontello-icon icon-arrow">&#xe802;</i></button>
+                            <button href="" id="cellphone-bot-home-button" class="phonebtn"><i class="fontello-icon icon-arrow">&#xe803;</i></button>
+                            <button id="cellphone-bot-menu-button" class="phonebtn"><i class="fontello-icon icon-arrow">&#xe801;</i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container-fluid" id="locationContainer" style="display: none;">
+                <div id="map"></div>
+            </div>
+
+            <div class="whiteBox" id="loginContainer" style="display: none;">
+                <div class="flexBoxContainer">
+                    <form id="loginForm" autocomplete="off">
+                        <div class="heading">Log In</div>
+                        <div class="animatedInputContainer">
+                            <div class="animatedInput">
+                                <label for="inputUsername">USER</label>
+                                <input id="inputUsername" class="form-control" required autofocus>
+                            </div>
+                        </div>
+                        <div class="animatedInputContainer">
+                            <div class="animatedInput">
+                                <label for="inputPassword">PASSWORD</label>
+                                <input type="password" id="inputPassword" class="form-control" required>
+                            </div>
+                        </div>
+                        <button class="btn btn-lg btn-warning btn-block" type="submit">LOG IN</button>
+                        <div class="webkey-error alert alert-danger form-signin-alert" role="alert"></div>
+                    </form>
+                    <div class="navContainer">
+                        <a id="signupNav" href="">Sign up!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="whiteBox" id="signupContainer" style="display: none;">
+                <div class="flexBoxContainer">
+                    <form id="signUpForm" autocomplete="off">
+                        <div class="heading">Sign up</div>
+                        <div class="animatedInputContainer">
+                            <div class="animatedInput">
+                                <label for="inputUsernameSu">USER</label>
+                                <input id="inputUsernameSu" class="form-control" required autofocus>
+                            </div>
+                        </div>
+                        <div class="animatedInputContainer">
+                            <div class="animatedInput">
+                                <label for="inputPasswordSu">PASSWORD</label>
+                                <input type="password" id="inputPasswordSu" class="inputPassword form-control" required>
+                            </div>
+                        </div>
+                        <div class="animatedInputContainer">
+                            <div class="animatedInput">
+                                <label for="inputConfirmPasswordSu">Confirm password</label>
+                                <input type="password" id="inputConfirmPasswordSu" class="form-control" required>
+                            </div>
+                        </div>
+                        <button class="btn btn-lg btn-warning btn-block" type="submit">SIGN UP</button>
+                        <div class="webkey-error alert alert-danger form-signin-alert" role="alert"></div>
+                    </form>
+                    <div class="navContainer">
+                        <a id="loginNav" href="">Log In!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="whiteBox" id="openurlContainer" style="display: none;">
+                <div class="flexBoxContainer">
+                    <form id="urlForm">
+                        <div class="heading">Type your URL bellow</div>
+                        <div class="urlBody">
+                            <div class="inputContainer">
+                                <input id="inputUrl" class="form-control" required>
+                            </div>
+                            <div class="submitButton">
+                                <button type="submit"></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="bottomStatusIndicator right">
+                <div class="qualityContainer">
+                    <div id="qualityBox" class="qualityBox">
+                        <div class="qualityTitle">Streaming Quality</div>
+                        <table>
+                            <tr class="qualitySetter unclickable" id="resAuto" >
+                                <td class="bolder"><i class="glyphicon glyphicon-ok activeIndicator"></i> Auto</td>
+                                <td class="resolution">Best available</td>
+                            </tr>
+                            <tr class="qualitySetter unclickable" id="resHigh">
+                                <td class="bolder"><i class="glyphicon glyphicon-ok activeIndicator notVisible"></i> High</td>
+                                <td id="resHighDesc" class="resolution">640x1920, 90%</td>
+                            </tr>
+                            <tr class="qualitySetter unclickable" id="resMedium" >
+                                <td class="bolder"><i class="glyphicon glyphicon-ok activeIndicator notVisible"></i> Medium</td>
+                                <td id="resMediumDesc" class="resolution">640x1920, 60%</td>
+                            </tr>
+                            <tr class="qualitySetter unclickable" id="resLow">
+                                <td class="bolder"><i class="glyphicon glyphicon-ok activeIndicator notVisible"></i> Low</td>
+                                <td id="resLowDesc" class="resolution">640x1920, 30%</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="qualitybtn" class="qualitybtn notClickable"><i class="glyphicon glyphicon-hd-video"></i> <span class="bolder">QUALITY</span></div>
+                </div>
+            </div>
+            <div id="bottomStatusIndicator" class="bottomStatusIndicator">
+                <div id="wipcBox" class="wipcBox whiteBox flexBoxContainer">
+                    <div class="wipcBoxTitleConnection"></div>
+                    <div class="wipcBoxTitle"><i class="fontello-icon fontello-light nav-icon">&#xe804;</i><span>Looks like your display can not reach</span></div>
+                    <div class="wipcMsgContent">Using this key: <div id="wipcSessionKey" class="wipcSessionKey">webkey.securityID</div>. We can enable streaming your device's screen. Lear more at the FAQ how to do this.
+                    </div>
+                    <div class="wipcButtonContainer">
+                        <button id="wipcFix" class="btn wipcSetter unclickable">Fix it</button>
+                        <button id="wipcCancel" class="btn wipcSetter unclickable">Cancel</button>
+                    </div>
+                </div>
+                <div id="connectedStatusIndicator" style="display: none" class="connectedStatusIndicator inlineStatusIndicator wipcbtn notClickable">
+                    <div class="pointIndicator"></div><div class="bolder">ONLINE</div>
+                </div>
+                <div id="connectingStatusIndicator" style="display: none" class="connectingStatusIndicator inlineStatusIndicator">
+                    <div class="pointIndicator"></div><div class="bolder">CONNECTING</div>
+                </div>
+                <div id="disconnectedStatusIndicator" style="display: none" class="disconnectedStatusIndicator inlineStatusIndicator">
+                    <div class="pointIndicator"></div><div class="bolder">OFFLINE</div>
+                </div>
+                <div id="deviceNickName" class="deviceNickName"></div>
+                <div id="deviceType" class="deviceType"></div>
+            </div>
+        </div>
+
+        <nav id="sidebarContainer" class="navbar navbar-default sidebar" style="display: none;">
+            <ul class="nav nav-pills nav-stacked">
+                <li id="phoneNav">
+                    <a href="#"><i class="fontello-icon fontello-light nav-icon">&#xe80a;</i><b class="menuTxt">Control</b></a>
+                </li>
+                <li id="openurlNav">
+                    <a href="#"><i class="fontello-icon nav-icon">&#xe806;</i><b class="menuTxt">Open URL</b></a>
+                </li>
+                <li id="locationNav">
+                    <a href="#"><i class="fontello-icon fontello-light nav-icon">&#xe809;</i><b class="menuTxt">GPS</b></a>
+                </li>
+               <!--
+                <li id="filesNav" style="display: none;"><a href="#"><i class="glyphicon glyphicon-folder-open"></i>  Files</a>
+                </li>
+                <li id="termNav" style="display: none;"><a href="#"><i class="glyphicon glyphicon-unchecked"></i> Terminal</a>
+                </li> -->
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

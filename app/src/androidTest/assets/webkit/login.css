@@ -1,0 +1,33 @@
+.form-signin-alert {
+  color: black;
+  background: white;
+  border: none;
+  padding: 0;
+  text-align: center;
+  margin: 5px 0 0 0;
+  width: 100%;
+}
+.forget {
+  text-decoration: none;
+  color: white;
+  opacity: 0.7;
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: center;
+  display: block;
+}
+.forget:active {
+  text-decoration: none;
+  color: white;
+  opacity: 1;
+}
+.forget:focus {
+  text-decoration: none;
+  color: white;
+  opacity: 1;
+}
+.forget:hover {
+  text-decoration: none;
+  color: white;
+  opacity: 1;
+}

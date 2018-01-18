@@ -1,0 +1,172 @@
+.wipcBox {
+  opacity: 0;
+  transition: .3s all linear;
+  background: white;
+  margin-left: 0;
+  color: black;
+  text-align: left;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  padding-top: 15px;
+  max-width: 300px;
+}
+.wipcBox.showView {
+  opacity: 1;
+  transition: .3s all linear;
+}
+.wipcBox.showView .wipcButtonContainer button.btn {
+  cursor: pointer;
+}
+.wipcBox.showView .wipcButtonContainer button#wipcCancel {
+  cursor: pointer;
+}
+.wipcBox:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -20px;
+  margin-left: 0;
+  border-top: 20px solid transparent;
+  border-left: 20px solid #f6f6f6;
+  border-bottom: 20px solid transparent;
+  display: inline-block;
+}
+.wipcBoxTitle {
+  padding-left: 17px;
+  padding-right: 17px;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.wipcBoxTitle i {
+  transform: rotate(20deg);
+}
+.wipcBoxTitle i,
+.wipcBoxTitle span {
+  display: table-cell;
+  vertical-align: top;
+}
+.wipcBoxTitle span {
+  padding-left: 15px;
+  padding-top: 10px;
+}
+.wipcMsgContent {
+  padding-left: 17px;
+  padding-right: 17px;
+  margin-bottom: 18px;
+  color: #a0a0a0;
+}
+.wipcButtonContainer {
+  background: #f6f6f6;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: inline;
+  text-align: left;
+}
+.wipcButtonContainer button {
+  background-color: #00d2ff;
+  color: black;
+  display: inline;
+  width: 40%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-left: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  outline: 0;
+}
+.wipcButtonContainer button#wipcFix {
+  color: white;
+}
+.wipcButtonContainer button#wipcCancel {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: default;
+  overflow: hidden;
+  outline: none;
+}
+.wipcButtonContainer button:focus {
+  outline: 0;
+}
+.wipcButtonContainer button:active {
+  outline: 0;
+  box-shadow: none;
+}
+.wipcButtonContainer button.btn {
+  cursor: default;
+}
+.wipcButtonContainer button.btn:focus {
+  outline: none;
+}
+.wipcButtonContainer button.btn:active {
+  outline: none;
+  box-shadow: none;
+}
+.wipcButtonContainer button.btn:active:focus {
+  outline: none;
+}
+.wipcSessionKey {
+  display: inline;
+  color: black;
+  font-weight: bold;
+}
+.wipcbtn.notClickable:hover {
+  cursor: default;
+}
+.wipcbtn:hover {
+  cursor: pointer;
+}
+.bottomStatusIndicator {
+  position: absolute;
+  z-index: 2;
+  bottom: 25px;
+  left: 30px;
+  color: white;
+}
+.bottomStatusIndicator.right {
+  left: 0;
+  right: 35px;
+}
+.bottomStatusIndicator .pointIndicator {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: white;
+  margin-top: 6px;
+  margin-right: 10px;
+}
+.bottomStatusIndicator .inlineStatusIndicator {
+  display: flex;
+}
+.bottomStatusIndicator .connectedStatusIndicator .pointIndicator {
+  background: #11bb27;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 10px #11bb27;
+  -moz-box-shadow: 0px 0px 10px #11bb27;
+  box-shadow: 0px 0px 10px #11bb27;
+}
+.bottomStatusIndicator .connectingStatusIndicator .pointIndicator {
+  background: yellow;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 10px yellow;
+  -moz-box-shadow: 0px 0px 10px yellow;
+  box-shadow: 0px 0px 10px yellow;
+}
+.bottomStatusIndicator .disconnectedStatusIndicator .pointIndicator {
+  background: #fe0000;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 10px #fe0000;
+  -moz-box-shadow: 0px 0px 10px #fe0000;
+  box-shadow: 0px 0px 10px #fe0000;
+}

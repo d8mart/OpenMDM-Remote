@@ -1,0 +1,362 @@
+#phoneContainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    margin: 0 auto;
+}
+
+.cellphone-ultimate-frame {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    display: inline-block;
+}
+
+.physicalButtons {
+    position: relative;
+    top: 133px;
+}
+
+.physicalButton {
+    display: initial;
+    color: gray;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.physicalButton .volumetext {
+    display: inline-block;
+    transition: .3s all linear;
+    opacity: 1;
+    width: 80px;
+    height: auto;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.physicalButton .hiddenVolumetext {
+    display: inline-block;
+    transition: .3s all linear;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    margin-top: -21px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.physicalButton:hover .volumetext {
+    transition: .3s all linear;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+.physicalButton:hover .hiddenVolumetext {
+    opacity: 1;
+    height: auto;
+    width: 80px;
+    padding-left: 15px;
+    transition: .3s all linear;
+}
+
+.physicalButton:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.physicalButton:hover .button-txt {
+    transition: .3s all linear;
+}
+
+.physicalButton:hover .dot {
+    background-color: white;
+    transition: .3s all linear;
+}
+
+.dot {
+    position: absolute;
+    vertical-align: top;
+    transition: .3s all linear;
+    background-color: gray;
+    display: inline-block;
+    margin-top: 10px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+.animated-dot {
+    background: rgba(0,0,0,0);
+    transition: .3s all linear;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+.rightDot {
+    left: 14.5px;
+    top: 0.5px;
+}
+
+.leftDot {
+    left: 111.5px;
+    top: 0.5px;
+}
+
+.animatedDotWrapper {
+    border: 0.1px solid grey;
+    vertical-align: top;
+    height: auto;
+    width: auto;
+    border-radius: 50%;
+    margin-top: 4px;
+    margin-left: -6px;
+    position: absolute;
+    display: inline-block;
+    -webkit-transform: scale(0.25);
+    -ms-transform: scale(0.25);
+    transform: scale(0.25);
+    transition: .3s all linear;
+}
+
+.physicalButton:hover .animatedDotWrapper {
+    border-color: white;
+    -webkit-transform: scale(3);
+    -ms-transform: scale(3);
+    transform: scale(3);
+}
+
+.inline {
+    display: inline-block;
+}
+
+.power {
+    transition: .3s all linear;
+}
+
+.physicalButton:hover .power {
+    margin-left: -20px;
+}
+
+.cellphone-left-buttons {
+    float: left;
+    left: 5px;
+}
+
+.cellphone-right-buttons {
+    float: right;
+    right: 0;
+    position: absolute;
+    width: 130px;
+}
+
+.buttonsbatch {
+    text-align: left;
+    margin-left: 60px;
+    width: 100px;
+}
+
+#volume-split {
+    border: 0;
+    border-top: 2px solid;
+    border-color: white;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    width: 60px;
+    margin-left: 0;
+}
+
+.volume-button-txt {
+    transition: .3s all linear;
+    position: absolute;
+    margin-left: 10px;
+}
+
+.button-txt {
+    cursor: pointer;
+}
+
+/*----------------*/
+.cellphone-frame-inner {
+    border-left: 132px;
+    border-right: 132px;
+    border-top: 100px;
+    border-bottom: 100px;
+    border-style: solid;
+    -webkit-border-image: url(device-common.png) 301 132 301 132 stretch;
+    -moz-border-image: url(device-common.png) 301 132 301 132 stretch;
+    -o-border-image: url(device-common.png) 301 132 301 132 stretch;
+    border-image: url(device-common.png) 301 132 301 132 stretch;
+}
+
+.cellphone-mid {
+    width: 300px;
+    height: 300px;
+}
+
+.cellphone-buttons {
+    background-color: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.phonebtn {
+    color: white !important;
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    margin-left: 4%;
+    margin-right: 4%;
+    line-height: 0px !important;
+}
+
+#cellphone-bot-home-button {
+    //border: 2px solid white;
+    //border-radius: 1em 1em 4em 4em;
+}
+
+.cellphone-ultimate-frame button {
+    line-height: 0 !important;
+    border: none;
+    background: none;
+    color: #000000;
+    font-size: 1.1em;
+}
+
+.cellphone-ultimate-frame button:focus {
+    border: none;
+    background: none;
+    color: #000000;
+    outline: none;
+}
+
+.cellphone-ultimate-frame:active {
+    border-color: #ffffff;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+.qualityContainer {
+    position: absolute;
+    bottom: 90px;
+    right: 0;
+    margin-right: 0;
+}
+
+#qualityBox {
+    opacity: 0;
+    transition: .3s all linear;
+}
+
+#qualityBox.animatedQuality {
+    opacity: 1;
+    transition: .3s all linear;
+}
+
+.qualityBox {
+    background: white;
+    color: black;
+    text-align: left;
+    border-radius: 5px;
+    margin-bottom: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.qualityTitle {
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.qualityBox:before {
+    position: absolute;
+    content: '';
+    left: 100%;
+    bottom: -20px;
+    margin-left: -20px;
+    border-top: 20px solid transparent;
+    border-right: 20px solid white;
+    border-bottom: 20px solid transparent;
+    display: inline-block;
+}
+
+.qualityBox td {
+    padding: 7px 25px 7px 17px;
+}
+
+.qualityBox td.resolution {
+    color: #a0a0a0;
+}
+
+.qualityBox td .activeIndicator {
+    color: #01cfff;
+}
+
+.qualityBox td .activeIndicator.notVisible {
+    display: none;
+}
+
+.qualityBox tr:hover {
+    cursor: default;
+    background: #f6f6f6;
+}
+
+.qualityBox.animatedQuality tr:hover {
+    cursor: pointer;
+}
+
+.qualitybtn {
+    color: white;
+    position: absolute;
+    right: -3px;
+    margin-top: 25px;
+    min-width: 75px;
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+}
+
+.qualitybtn:hover {
+    cursor: pointer;
+}
+
+.qualitybtn.notClickable:hover {
+    cursor: default;
+}
+
+#locationContainer {
+    padding: 0px;
+    margin-top: 0;
+}
+
+#locationContainer #map {
+    width: 100%;
+    height: 100% !important;
+    border: 1px solid #AAA;
+}
+
+.deviceNickName {
+    padding-top: 0px;
+    font-size: 23px;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+.deviceType {
+    height: 20px;
+    padding-bottom: 0;
+    font-size: 13px;
+    opacity: 0.5;
+}

@@ -1,0 +1,6 @@
+#include <linux/fb.h>
+#include <gui/SurfaceComposerClient.h>
+#include <SkBitmap.h>
+    
+using namespace android;
+

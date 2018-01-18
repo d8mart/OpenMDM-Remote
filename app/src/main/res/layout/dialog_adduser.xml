@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:webkey="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:theme="@style/WebkeyDialog">
+
+    <com.openmdmremote.ui.typefaces.MyTextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/adduser_title"
+        android:textSize="25sp"
+        webkey:bold="false" />
+
+    <com.openmdmremote.ui.typefaces.MyTextInputLayout
+        android:id="@+id/inputlayout_add_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_txtviews_space">
+
+        <EditText
+            android:id="@+id/adduser_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:hint="@string/adduser_username" />
+    </com.openmdmremote.ui.typefaces.MyTextInputLayout>
+
+
+    <com.openmdmremote.ui.typefaces.MyTextInputLayout
+        android:id="@+id/inputlayout_add_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_txtviews_space">
+
+        <EditText
+            android:id="@+id/adduser_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:hint="@string/adduser_password" />
+    </com.openmdmremote.ui.typefaces.MyTextInputLayout>
+
+    <com.openmdmremote.ui.typefaces.MyTextInputLayout
+        android:id="@+id/inputlayout_add_pwdagain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_txtviews_space">
+
+        <EditText
+            android:id="@+id/adduser_pwdagain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:hint="@string/adduser_password_again" />
+    </com.openmdmremote.ui.typefaces.MyTextInputLayout>
+
+</LinearLayout>

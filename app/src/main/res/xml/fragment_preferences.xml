@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/background">
+    <com.openmdmremote.ui.preferences.MyPreferenceCategory
+        android:title="@string/pref_title_general"
+        android:key="pref_key_general">
+
+        <com.webkey.ui.preferences.MyCheckBoxPreference
+            android:key="autostart"
+            android:title="@string/pref_autostart"
+            android:defaultValue="true"
+            android:summary="@string/pref_summ_autostart"/>
+    </com.openmdmremote.ui.preferences.MyPreferenceCategory>
+
+    <com.openmdmremote.ui.preferences.MyPreferenceCategory
+        android:title="@string/pref_title_localservice"
+        android:key="pref_key_localservice">
+        <com.webkey.ui.preferences.MyPreferenceScreen
+            android:key="localhttpport"
+            android:defaultValue="8080"
+            android:title="@string/pref_localhttpport" />
+
+        <com.webkey.ui.preferences.MyPreferenceScreen
+            android:key="localwsport"
+            android:defaultValue="8081"
+            android:title="@string/pref_localwsport" />
+
+    </com.openmdmremote.ui.preferences.MyPreferenceCategory>
+
+    <com.openmdmremote.ui.preferences.MyPreferenceCategory
+        android:title="@string/pref_title_harborserver"
+        android:key="pref_key_mediateserver">
+
+        <com.webkey.ui.preferences.MyCheckBoxPreference
+            android:key="remotelogging"
+            android:title="@string/pref_remotelogging"
+            android:defaultValue="false"
+            android:summary="@string/pref_summ_remotelogging"/>
+
+        <com.webkey.ui.preferences.MyPreferenceScreen
+            android:key="account_preference"
+            android:title="@string/pref_account"
+            android:summary="@string/pref_sum_account_login">
+        </com.webkey.ui.preferences.MyPreferenceScreen>
+    </com.openmdmremote.ui.preferences.MyPreferenceCategory>
+</android.support.v7.preference.PreferenceScreen>

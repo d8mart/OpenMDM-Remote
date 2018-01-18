@@ -1,0 +1,55 @@
+#openurlContainer.whiteBox {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+#openurlContainer.whiteBox .flexBoxContainer {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: calc(90% - 300px);
+}
+#openurlContainer.whiteBox .flexBoxContainer form {
+  border-radius: 0;
+  padding-bottom: 10px;
+  font-family: TrimMonoWeb, JuriZaech, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#openurlContainer.whiteBox .flexBoxContainer form .heading {
+  position: absolute;
+  font-size: 14px;
+  font-weight: 600;
+}
+#openurlContainer.whiteBox .flexBoxContainer form .urlBody {
+  display: flex;
+}
+#openurlContainer.whiteBox .flexBoxContainer form .submitButton {
+  margin-top: 40px;
+  font-size: 20px;
+  width: 45px;
+  height: 45px;
+}
+#openurlContainer.whiteBox .flexBoxContainer form .submitButton button {
+  background: url("arrow-right.png") no-repeat white;
+  height: 45px;
+}
+#openurlContainer.whiteBox .flexBoxContainer form .submitButton button:hover,
+#openurlContainer.whiteBox .flexBoxContainer form .submitButton button:active {
+  background-size: 32px auto;
+}
+#openurlContainer.whiteBox .flexBoxContainer form .submitButton button:focus {
+  border: none;
+  outline: none;
+}
+#openurlContainer.whiteBox .flexBoxContainer form .inputContainer {
+  flex: 1;
+  margin-top: 30px;
+}
+#openurlContainer.whiteBox .flexBoxContainer form .inputContainer input {
+  font-size: 20px;
+  font-weight: lighter;
+  border: none;
+  padding-bottom: 0;
+}
